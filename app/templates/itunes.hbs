@@ -1,0 +1,26 @@
+{{outlet}}
+<h1>Search Itunes</h1>
+<form {{action 'searchItunes' on='submit'}} >
+	<div class="form-group">
+		<label>Title</label>
+		{{input type="text" class="form-control" value=query placeholder="Search Itunes..."}}
+	</div>
+	<button class="btn btn-primary">Search</button>
+</form>
+<br>
+<br>
+{{#if (eq model.type "search")}}
+	{{partial "itunes/search"}}
+{{/if}}
+{{#if (eq model.type "albums")}}
+	{{partial "itunes/albums"}}
+{{/if}}
+{{#if (eq model.type "songs")}}
+	{{partial "itunes/songs"}}
+{{/if}}
+{{#if (eq model.type "song")}}
+	{{partial "itunes/song"}}
+{{/if}}
+{{#if (eq model.type "album")}}
+	{{partial "itunes/album"}}
+{{/if}}

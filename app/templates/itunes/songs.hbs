@@ -1,0 +1,18 @@
+<div class="container" id="top-songs">
+	<button {{action 'goBack'}} class="btn btn-warning">GoBack</button>
+	<h2>Top Songs</h2>
+	<small>{{model.ajax.resultCount}} Results</small>
+	{{#each model.ajax.results as |r|}}
+	<div class="well">
+		<img src={{r.artworkUrl60}}>
+		<p>Track Tittle: {{r.trackName}}</p>
+		<p>Artist: {{r.artistName}}</p>
+		<small>Album: {{r.collectionName}}</small>
+		<button {{action 'artistAlbum' r.collectionId}}class="btn btn-primary btn-xs">View Album</button>
+		<br>
+		<small>Release Date: {{formatDate r.releaseDate}}</small>
+		<br>
+		<small>Track Length: {{formatTrackTime r.trackTimeMillis}}</small>
+	</div>
+	{{/each}}
+</div>

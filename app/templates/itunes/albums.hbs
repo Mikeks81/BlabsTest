@@ -1,0 +1,16 @@
+<div class="container" id="top-albums">
+	<button {{action 'goBack'}} class="btn btn-warning">GoBack</button>
+	<h2>Albums</h2>
+	<small>{{model.ajax.resultCount}} Results</small>
+	{{#each model.ajax.results as |r|}}
+	<div class="well">
+		<img src={{r.artworkUrl60}}>
+		<p>Album: {{r.collectionName}}</p>
+		<small>Artist: {{r.artistName}}</small>
+		<br>
+		<small>Tracks: {{r.trackCount}}</small>
+		<br>
+		<button {{action 'artistAlbum' r.collectionId}}class="btn btn-primary btn-xs">View Album</button>
+	</div>
+	{{/each}}
+</div>
