@@ -10,9 +10,9 @@
 		<small>Album: {{r.collectionName}}</small>
 		<button {{action 'artistAlbum' r.collectionId}}class="btn btn-primary btn-xs">View Album</button>
 		<br>
-		<small>Release Date: {{formatDate r.releaseDate}}</small>
-		<br>
 		<small>Track Length: {{formatTrackTime r.trackTimeMillis}}</small>
+		<br>
+		<small>Release Date: {{formatDate r.releaseDate}}</small>
 	</div>
 	{{/each}}
 </div>

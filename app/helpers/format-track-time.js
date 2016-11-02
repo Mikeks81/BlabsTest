@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
+//formats track time from milli seconds to minutes and seconds
 export function formatTrackTime(params) {
   var mins = Math.floor(params/60000);
   var seconds = ((params%60000) / 1000).toFixed(0);

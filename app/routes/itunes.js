@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	model: function(){
+		//pulls all params needed for ajax call from target.controller (itunes) to concat endpoint url and values to be presented to template
 		var url = 'https://itunes.apple.com';
 		var query = this.controllerFor('itunes').get('actions.results');
 		var search = this.controllerFor('itunes').get('actions.url');

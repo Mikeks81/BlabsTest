@@ -1,7 +1,76 @@
+body{
+	/*setting font color for entire webapp*/
+	color: #5e5e5e;
+}
+.navbar-default{   
+	background-color: lightsteelblue;
+    border-color: lightsteelblue;
+    border-radius: 0;
+}
+.nvabar-default > a, .navbar-brand{
+	color: white !important;
+}
+img{
+	float: left;
+    margin-right: 15px;
+}
+input{
+	border-radius: 2px !important;
+	box-shadow: none !important;
+}
 .album-track{
+	/*album song list positioning*/
 	display: inline-block;
 }
-.artist-album{
-	
+.well{
+	/*individual resutl container styling*/
+	box-shadow: none;
+    border: none;
+    border-radius: 2px;
+    overflow: auto;
+}
+.info-box{
+	/*individual info area positioning*/
+	display: inline-block;
+}
+.btn{
+	/*global button styling*/
+	border: none;
+    border-radius: 2px;
+}
+.btn-primary{
+	/*small button color*/
+	background-color: lightsteelblue;
+}
+.btn-success{
+	/*big button color*/
+	background-color: #c15353;
+}
+.btn-success:hover {
+	/*big button color*/
+	background-color: #a52a2a;
+}
+.artist-top-actions{
+	/*positioning of big button div*/
+	display: inline-block;
+	margin-left: 25px;
+	float:right;
+}
+.artist-top-actions > button{
+	/*big button stylings*/
+	display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.view-individual{
+	/*positoning of small button div*/
+	display: inline-block;
+	margin-left: 25px;
+}
+.view-individual > button{
+	/*small button stylings*/
+	display: block;
+    width: 100%;
+    margin-bottom: 10px;
 }
 

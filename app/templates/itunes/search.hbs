@@ -4,16 +4,20 @@
 		<small>{{model.ajax.resultCount}} Results</small>
 		{{#each model.ajax.results as |r|}}
 		<div class='well'>
-			<img src={{r.artworkUrl60}}>
-			<p>Artist: {{r.artistName}}</p>
-			<p>Song: {{r.trackName}}
+			<img src={{r.artworkUrl100}}>
+			<div class="info-box">
+				<p><strong>Artist:</strong> {{r.artistName}}</p>
+				<p><strong>Song:</strong> {{r.trackName}}</p>
+				<p><strong>Album:</strong> {{r.collectionName}}</p>
+			</div>
+			<div class="view-individual">
 				<button {{action 'artistSong' r.trackId}}class="btn btn-primary btn-xs">View Song Info</button>
-			</p>
-			<p>Album {{r.collectionName}}
 				<button {{action 'artistAlbum' r.collectionId}}class="btn btn-primary btn-xs">View Album</button>
-			</p>
-			<button class="btn btn-success" type="button" {{action 'artistSongs' r.artistId}}>View Top Songs</button>
-			<button class="btn btn-success" type="button" {{action 'artistAlbums' r.artistId}}>View Top Albums</button>
+			</div>
+			<div class="artist-top-actions">
+				<button class="btn btn-success" type="button" {{action 'artistSongs' r.artistId}}>View Top Songs</button>
+				<button class="btn btn-success" type="button" {{action 'artistAlbums' r.artistId}}>View Top Albums</button>
+			</div>
 			
 		</div>
 		{{/each}}
